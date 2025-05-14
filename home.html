@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medium - Where good ideas find you</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            color: #292929;
+            line-height: 1.4;
+            background-color: #fff;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            background-color: white;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #000;
+            font-family: medium-content-sans-serif-font, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #292929;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        nav a:hover{
+    background-color: #0400ff;
+    color: rgb(189, 201, 204);
+    border-radius: 5px;
+  }
+
+        .auth-links {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .auth-links a {
+            text-decoration: none;
+            color: #292929;
+            font-size: 14px;
+        }
+
+        .auth-links a:last-child {
+            background-color: #000;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 400;
+        }
+
+        /* Main Content Styles */
+        .main-container {
+            display: flex;
+            margin-top: 120px;
+            padding: 0 5%;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .text-content {
+            flex: 1;
+            max-width: 600px;
+            text-align: left;
+            padding-right: 40px;
+        }
+
+        h1 {
+            font-size: 80px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            letter-spacing: -0.05em;
+            font-family: medium-content-sans-serif-font, sans-serif;
+        }
+
+        .subtitle {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #292929;
+            font-weight: 300;
+        }
+
+        .divider {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin: 30px 0;
+            width: fit-content;
+        }
+
+        .divider-line {
+            width: 30px;
+            height: 1px;
+            background-color: #292929;
+        }
+
+        .cta-button {
+            background-color: #000;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-size: 18px;
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: 400;
+        }
+
+        /* Image Container - Right aligned */
+        .image-container {
+            flex: 1;
+            max-width: 500px;
+            margin-left: 40px;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        /* Footer Styles */
+        footer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+            flex-wrap: wrap;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            margin-top: 60px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #757575;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        
+         footer a:hover{
+    background-color: #00e1ff;
+    color: rgb(71, 90, 95);
+    border-radius: 5px;
+  }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Medium</div>
+        <nav>
+            <a href="#">Our story</a>
+            <a href="#">Membership</a>
+            <a href="#">Write</a>
+        </nav>
+        <div class="auth-links">
+            <a href="login.html">Sign in</a>
+            <a href="#">Get started</a>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="text-content">
+            <h1>Human Stories & Ideas</h1>
+            <p class="subtitle">A place to read, write, and deepen your understanding</p>
+            
+            
+            
+            <a href="#" class="cta-button">Start reading</a>
+        </div>
+        
+        <!-- Right-aligned Image -->
+        <div class="image-container">
+            <img src="med.jpg" alt="Featured content" class="featured-image">
+        </div>
+    </div>
+ 
+    <footer>
+        <a href="#">Help</a>
+        <a href="#">Status</a>
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+        <a href="#">Blog</a>
+        <a href="#">Privacy</a>
+        <a href="#">Rules</a>
+        <a href="#">Terms</a>
+        <a href="#">Text to speech</a>
+    </footer>
+
+
+    
+
+</body>
+</html>
