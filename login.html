@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Airspace</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+    body { display: flex; height: 100vh; background: #f9f9f9; }
+    .left { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 40px; background: #fff; }
+    .right { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 40px; background: linear-gradient(135deg, #dbeafe, #f0f9ff); }
+
+    .logo { font-weight: 700; font-size: 24px; margin-bottom: 40px; color: #1e3a8a; }
+    form { width: 100%; max-width: 320px; }
+    input[type=email], input[type=password], input[type=username]{
+      width: 100%; padding: 12px; margin: 10px 0; border: 3px solid #ccc; border-radius: 6px;
+    }
+    .checkbox { display: flex; align-items: center; font-size: 14px; color: #555; margin: 10px 0; }
+    .btn-primary {
+      background-color: #2563eb; color: #fff; padding: 12px; border: none; border-radius: 6px;
+      width: 100%; font-weight: 600; cursor: pointer; margin-top: 10px;
+    }
+    .btn-primary:hover { background-color: #1d4ed8; }
+    .divider { text-align: center; margin: 20px 0; color: #888; }
+    .social-login button {
+      width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 6px; border: none; cursor: pointer; font-weight: 600;
+    }
+    .google { background-color: #fff; border: 1px solid #ccc; }
+    .facebook { background-color: #1877f2; color: white; }
+    .apple { background-color: #000; color: white; }
+    .right h2 { font-size: 24px; font-weight: 700; color: #1f2937; text-align: center; }
+    .right h2 span { color: #3b82f6; }
+    .right img { width: 100px; margin-top: 20px; }
+    .small-text { font-size: 14px; color: #444; text-align: center; margin-top: 15px; }
+    a { color: #2563eb; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="left">
+    <div class="logo">Airspace</div>
+    <form id="loginForm">
+      
+       <input type="Username" placeholder="username" required>
+      <input type="password" placeholder="Password" required>
+      <div class="checkbox">
+        <input type="checkbox" id="remember"> <label for="remember">&nbsp; Remember me</label>
+      </div>
+      <button class="btn-primary">Login</button>
+      <div class="divider">or</div>
+      <div class="social-login">
+        <button class="google">Login with Google</button>
+        <button class="facebook">Login with Facebook</button>
+        <button class="apple">Login with Apple</button>
+      </div>
+      <div class="small-text">
+        Don't have an account? <a href="register.html">Register</a>
+      </div>
+    </form>
+  </div>
+
+
+  
+  
+
+   
+
+<img src="img.jpg" alt="Featured content" class="featured-image">
+
+<script >
+
+    
+   document.getElementById("LoginForm").addEventListener ("submit", function(event) {
+  event.preventDefault();
+
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+
+  var user = localStorage.getItem("user");
+
+  if (user) {
+    var parsedUser = JSON.parse(user);
+    if (parsedUser.email === email && parsedUser.password === password) {
+      // Login success
+      alert("Login successful!");
+      window.location.href = "home.html"; 
+    } else {
+      alert("Incorrect email or password.");
+    }
+  } else {
+    alert("User not found. Please register first.");
+  }
+});
+
+
+      
+
+  </script>
+ 
+  
+</body>
+</html>
