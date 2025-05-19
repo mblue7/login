@@ -61,30 +61,32 @@
   <script >
 
 
-    document.getElementById("registerForm").addEventListener("submit", function(event) {
+    document.querySelector("form").addEventListener("submit", function(event) {
       event.preventDefault();
-      var fullName = document.getElementById("fullName").value;
-      var UserName = document.getElementById("UserName").value;
-      var  email = document.getElementById("email").value;
-      var password = document.getElementById("password").value;
-      var confirmPassword = document.getElementById("confirmPassword").value;
+    var fullName = document.querySelector('input[placeholder="Full Name"]').value;
+    var userName = document.querySelector('input[placeholder="UserName"]').value;
+    var email = document.querySelector('input[placeholder="Email"]').value;
+    var password = document.querySelector('input[placeholder="Password"]').value;
+    var confirmPassword = document.querySelector('input[placeholder="Confirm Password"]').value;
 
-      if (password !== confirmPassword) {
-        alert("Passwords do not match.");
-        return;
-      }
+    if (password !== confirmPassword) {
+      alert("Passwords do not match.");
+      return;
+    }
 
-      const user = { name: fullName,
-         UserName:UserName,
-         password: password
-         };
-      localStorage.setItem("username", JSON.stringify(user));
-      alert("Registration successful! Please login.");
-      window.location.href = "login.html";
+    const user = {
+      name: fullName,
+      userName: userName,
+      email: email,
+      password: password
+    };
+    localStorage.setItem("user", JSON.stringify(user));
+    alert("Registration successful! Please login.");
+    window.location.href = "login.html";
     });
 
     
-  </script>
+
 
   </script>
   

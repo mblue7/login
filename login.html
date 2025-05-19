@@ -41,7 +41,7 @@
     <div class="logo">Airspace</div>
     <form id="loginForm">
       
-       <input type="Username" placeholder="username" required>
+       <input type="text" placeholder="UserName" required>
       <input type="password" placeholder="Password" required>
       <div class="checkbox">
         <input type="checkbox" id="remember"> <label for="remember">&nbsp; Remember me</label>
@@ -69,32 +69,33 @@
 
 <script >
 
-    
-   document.getElementById("LoginForm").addEventListener ("submit", function(event) {
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
   event.preventDefault();
 
-  var email = document.getElementById("email").value;
-  var password = document.getElementById("password").value;
+var UserName = document.querySelector('input[placeholder="UserName"]').value;
+var password = document.querySelector('input[placeholder="Password"]').value;
 
   var user = localStorage.getItem("user");
 
-  if (user) {
-    var parsedUser = JSON.parse(user);
-    if (parsedUser.email === email && parsedUser.password === password) {
-      // Login success
-      alert("Login successful!");
-      window.location.href = "home.html"; 
-    } else {
-      alert("Incorrect email or password.");
+if (user) {
+    try {
+        var parsedUser = JSON.parse(user);
+          console.log("Entered username:", UserName);
+      console.log("Entered password:", password);
+      console.log("Stored user:", parsedUser);
+        if (parsedUser.UserName === UserName && parsedUser.password === password) {
+            alert("Login successful!");
+            window.location.href = "home.html";
+        } else {
+            alert("Incorrect username or password.");
+        }
+    } catch (e) {
+        alert("User data is corrupted. Please register again.");        localStorage.removeItem("user");
     }
-  } else {
+} else {
     alert("User not found. Please register first.");
-  }
+}
 });
-
-
-      
-
   </script>
  
   
